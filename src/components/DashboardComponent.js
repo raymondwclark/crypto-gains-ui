@@ -11,10 +11,10 @@ const DashboardComponent = () => {
     useEffect(() => {
         getBalances();
 
-        // Refresh data every 10 seconds
+        // Refresh data every 25 minutes
         setInterval(() => {
             getBalances();
-        }, 600000)
+        }, 1500000)
     }, [setBalances, setLastPulled]);
 
     const getBalances = async () => {
