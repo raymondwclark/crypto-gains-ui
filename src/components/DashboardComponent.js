@@ -9,6 +9,11 @@ const DashboardComponent = () => {
 
     useEffect(() => {
         getBalances();
+
+        // Refresh data every 10 seconds
+        setInterval(() => {
+            getBalances();
+        }, 600000)
     }, [setBalances, setLastPulled]);
 
     const getBalances = async () => {
@@ -32,6 +37,9 @@ const DashboardComponent = () => {
             </label>
             <label style={{textAlign: 'center', color: 'rgb(120, 120, 120)', fontSize: '10px'}}>
                 (Resets every 24 hrs)
+            </label>
+            <label style={{textAlign: 'center', color: 'rgb(120, 120, 120)', fontSize: '10px'}}>
+                Last refreshed {moment(new Date()).format('MMMM Do YYYY, h:mm:ss a')}
             </label>
         </div>
     )
