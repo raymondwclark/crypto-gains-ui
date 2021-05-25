@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import DashboardComponent from './components/DashboardComponent';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div style={{padding: '20px'}}>
+            <div style={{position: 'fixed', 
+            width: '100%', height: '90px', 
+            top: '0', left: '0', borderBottom: '1px solid rgb(150, 150, 150)',
+            backgroundColor: 'rgb(31, 33, 36)'}}>
+                <h1>Crypto Gains</h1>
+            </div>
+            <DashboardComponent></DashboardComponent>
+        </div>
+    );
 }
 
 export default App;
